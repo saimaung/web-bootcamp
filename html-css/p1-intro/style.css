@@ -1,0 +1,36 @@
+.box1 {
+  background-color: skyblue;
+  width: 550px;
+  height: 450px;
+}
+
+.box2 {
+  background-color: green;
+  width: 300px;
+  height: 250px;
+}
+
+.box3 {
+  background-color: aquamarine;
+  width: 450px;
+  height: 150px;
+}
+
+.box4 {
+  background-color: blue;
+  width: 100px;
+  height: 70px;
+}
+
+.hw2-box1 {
+  background-color: gray;
+  width: 680px;
+  height: 500px;
+}
+
+.hw2-box2 {
+  background-color: yellow;
+  width: 450px;
+  height: 300px;
+  margin-left: 5px;
+}
