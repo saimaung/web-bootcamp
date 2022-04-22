@@ -25,10 +25,10 @@ let bird = 'Mandarin Bird';
 
 function bird_watch() {
   let bird = 'Pheasant';
-  console.log(bird);
+  // console.log(bird);
 }
 
-console.log(bird); // 'Mandarin Bird'
+// console.log(bird); // 'Mandarin Bird'
 
 
 /**
@@ -46,10 +46,10 @@ if (radius >= 8) {
   var minsPerSeconds = 60; // var is 
 }
 
-console.log(radius); // 8
+// console.log(radius); // 8
 // console.log(PI); // Not defined
 // console.log(circ); // Not defined
-console.log(minsPerSeconds);
+// console.log(minsPerSeconds);
 
 /**
  * Problematic Scenario if used var incorrectly
@@ -57,7 +57,7 @@ console.log(minsPerSeconds);
 let animals = ['Dog', 'Bird', 'Panda'];
 
 for (var i=0; i<animals.length; i++) {
-  console.log(i, animals[i]);
+  // console.log(i, animals[i]);
 }
 
 console.log(i); // Still exists and it got incremented to 3 from the for loop Not Block scope
@@ -86,7 +86,7 @@ function outer() {
     // let movie = 'The Wire';
     // console.log(movie.toUpperCase()); // 'The Wire'
     
-    console.log(movie.toUpperCase()); // Lexical Scope To Parent Function
+    // console.log(movie.toUpperCase()); // Lexical Scope To Parent Function
     let x = 10; // Not the other way around
   }
   // console.log(x); // No access - not the other way around
@@ -107,17 +107,17 @@ const square = function (num) {
 const product = function multiply(x, y) {
   return x * y;
 }
-console.log(product(3, 4)); // 12
+// console.log(product(3, 4)); // 12
 // console.log(multiply(3, 4)); // UNDEFINED - app.js:107 Uncaught ReferenceError: multiply is not defined
 
 function sqrt(num) {
   return num * num;
 }
 
-console.log(sqrt(7)); // 49
-console.log(square(7)); // 49
-console.dir(square); // display in object format -> proof that functions are object
-console.dir(sqrt);
+// console.log(sqrt(7)); // 49
+// console.log(square(7)); // 49
+// console.dir(square); // display in object format -> proof that functions are object
+// console.dir(sqrt);
 
 /**
  * Method
@@ -130,7 +130,7 @@ const math = {
   product: multiply
 }
 
-console.log(math.product(2, 3)); // this is method. Similar to "sai".toUpperCase()
+// console.log(math.product(2, 3)); // this is method. Similar to "sai".toUpperCase()
 
 
 /*******************************************************************************************
@@ -147,10 +147,10 @@ function callTwice(func) {
 }
 
 function laugh() {
-  console.log('LOL');
+  // console.log('LOL');
 }
 
-console.log(callTwice(laugh)); // pass a function as an argument
+// console.log(callTwice(laugh)); // pass a function as an argument
 
 function loopNTimes(func, n) {
   for(let i=0; i<n; i++) {
@@ -159,7 +159,7 @@ function loopNTimes(func, n) {
 }
 
 function cheer() {
-  console.log('FriYay');
+  // console.log('FriYay');
 }
 
 loopNTimes(cheer, 10);
@@ -186,8 +186,8 @@ function multiplyBy(n) {
 const multiplyEightBy = multiplyBy(8);
 const halve = multiplyBy(0.5);
 
-console.log(multiplyEightBy(3));
-console.log(halve(8));
+// console.log(multiplyEightBy(3));
+// console.log(halve(8));
 
 function makeBetweenFunc(n, m) {
   return function(num) {
@@ -196,10 +196,10 @@ function makeBetweenFunc(n, m) {
 }
 
 const isBetweenOneAndTen = makeBetweenFunc(1, 10);
-console.log(isBetweenOneAndTen(1)); 
-console.log(isBetweenOneAndTen(10));
-console.log(isBetweenOneAndTen(5));
-console.log(isBetweenOneAndTen(11));
+// console.log(isBetweenOneAndTen(1)); 
+// console.log(isBetweenOneAndTen(10));
+// console.log(isBetweenOneAndTen(5));
+// console.log(isBetweenOneAndTen(11));
 
 
 /*******************************************************************************************
@@ -216,7 +216,7 @@ console.log(isBetweenOneAndTen(11));
 }
 
 function laugh() {
-  console.log('LOL');
+  // console.log('LOL');
 }
 
 // In this example, laugh is a call back function
@@ -243,7 +243,7 @@ btn.addEventListener('click', function() {
  *   - ❌ annoymous functions
  ********************************************************************************************/
 var animal = 'Tapir';
-console.log(animal);
+// console.log(animal);
 
 // what if the order is switched. Get undefined for animalOrderSwitched. However,
 // didn't get ReferenceError like console.log(animalNoVariable);. Why?
@@ -253,15 +253,15 @@ console.log(animal);
 //    var animalOrderSwitched;
 //    console.log(animalOrderSwitched);
 //    nimalOrderSwitched = 'Red Tapir';
-console.log(animalOrderSwitched); // undefined
+// console.log(animalOrderSwitched); // undefined
 var animalOrderSwitched = 'Red Tapir';
-console.log(animalOrderSwitched); // 'Red Tapir'
+// console.log(animalOrderSwitched); // 'Red Tapir'
 
 // functions.js:251 Uncaught ReferenceError: animalNoVariable is not defined
 // console.log(animalNoVariable);
 
 let shrimp = 'Harlequin Shrimp';
-console.log(shrimp); // 'Harlequin Shrimp'
+// console.log(shrimp); // 'Harlequin Shrimp'
 
 // Uncaught ReferenceError: Cannot access 'incorrectOrderShrimp' before initialization
 // console.log(letShrimp);
@@ -273,7 +273,7 @@ console.log(shrimp); // 'Harlequin Shrimp'
 
 howl(); // 'AWOOOOOOOO'
 function howl() {
-  console.log('AWOOOOOOOO');
+  // console.log('AWOOOOOOOO');
 }
 
 // hoot(); // Uncaught TypeError: hoot is not a function
@@ -285,7 +285,7 @@ var hoot = function() {
 // letHoot(); // Uncaught ReferenceError: Cannot access 'letHoot' before initialization
 // console.log(letHoot) // Uncaught ReferenceError: Cannot access 'letHoot' before initialization
 let letHoot = function() {
-  console.log('HOOOO HOOOO');
+  // console.log('HOOOO HOOOO');
 }
 
 
@@ -314,7 +314,7 @@ let letHoot = function() {
 const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 const sqre = function(n) {
   const sqre = n * n;
-  console.log(sqre);
+  // console.log(sqre);
   return sqre;
 }
 nums.forEach(sqre);
@@ -322,7 +322,7 @@ nums.forEach(sqre);
 // Useful if you need the INDEX of the collection
 const sqreWithIndex = function(n, idx) {
   const sqre = n * n;
-  console.log(idx, sqre);
+  // console.log(idx, sqre);
   return sqre;
 }
 
@@ -338,14 +338,14 @@ const capitalize = function(text) {
   return text.toUpperCase();
 }
 const caps = texts.map(capitalize);
-console.log(caps);
+// console.log(caps);
 
 const numbers = [20, 21, 22, 23, 24, 25, 26, 27];
 const double = function(number) {
   return number * 2;
 }
 const doubleNumbers = numbers.map(double);
-console.log(doubleNumbers);
+// console.log(doubleNumbers);
 
 const isNumEven = function(number) {
   return {
@@ -354,14 +354,14 @@ const isNumEven = function(number) {
   }
 }
 const isElementEven = numbers.map(isNumEven);
-console.log(isElementEven);
+// console.log(isElementEven);
 
 const words = ['asap', 'byob', 'rsvp', 'diy'];
 const capDelimiterized = function(element) {
   return element.toUpperCase().split('').join('.');
 }
 const capAndDelim = words.map(capDelimiterized);
-console.log(capAndDelim);
+// console.log(capAndDelim);
 
 /**
  * Arrow Functions
@@ -460,3 +460,102 @@ const books = [
 
 const csBook = book => book.genres.includes('computer science');
 const cs = books.filter(csBook); 
+
+
+/** EVERY
+ * Array.every
+ *    - tests whether all elements in the array pass the test function
+ *    - it returns a Boolean value (Boolean call back function)
+ */
+const everyWords = ['dog', 'dig', 'log', 'bag', 'wag'];
+const longWord = everyWords.every(word => word.length > 3); // false
+const dPrefixWord = everyWords.every(word => word[0] === 'd'); // false
+const postfixG = everyWords.every(word => word[word.length -1] === 'g'); // true
+
+/** SOME
+ * Array.some
+ *    - tests whether ANY elements in the array pass the test function
+ *    - it returns a Boolean value (Boolean call back function)
+ */
+const mixWords = ['dog', 'jello', 'log', 'cupcake', 'bag', 'wag'];
+const atLeastLenOfFour = mixWords.some(word => word.length > 4); // true
+
+/** SORT
+ *  - Mutable
+ * Array.sort()
+ *  - default sort: convert all to String and sort them as string
+ * 
+ * Array.sort(comapreFunc(a, b))
+ *    - If compareFunc(a, b) returns less than 0, sort a before b
+ *    - If compareFunc(a, b) returns 0, leave a and b unchanged with respect to each other
+ *    - If compareFunc(a, b) returns greater than 0, sort b before a
+ * 
+*/
+const prices = [400.50, 3000, 99.90, 35.99, 12.00, 9500];
+prices.sort(); // prices = [12, 3000, 35.99, 400.5, 9500, 99.9]
+console.log(prices);
+
+const asscCompare = (a, b) => {
+  return a - b; 
+}
+prices.sort(asscCompare); // prices mutated
+console.log(prices); // [12, 35.99, 99.9, 400.5, 3000, 9500]
+
+
+const descCompare = (a, b) => b - a;
+/*
+400.50, 3000: 3000 - 400.50 = +, sort b before a, 3000, 400.50
+*/
+prices.sort(descCompare); // prices mutated
+console.log(prices); // [9500, 3000, 400.5, 99.9, 35.99, 12]
+
+/**
+ * REDUCE
+ *  - Executes a reducer function (callback in reducer formate) on each element of the array,
+ *    resulting in a single value
+ *  - callback function arguments: (accumulator, currentValue) - accumulator = total
+ */
+const sumReduce = (accumulator, currentVal) => accumulator + currentVal;
+const daysInWeek = [1, 2, 3, 4, 5, 6, 7]; // accumulator = 1, currentVal = 2, return value = 3. accumulator = 3, currentVal = 3, return value = 6
+const sumDaysInWeek = daysInWeek.reduce(sumReduce);
+
+// find a max val
+const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+const maxGrade = (currentMax, currentVal) => (Math.max(currentMax, currentVal));
+console.log(grades.reduce(maxGrade));
+
+
+const sumGrades = (currentTotal, currentVal) => {
+  console.log(`currentTotal: ${currentTotal}`);
+  console.log(`currentVal: ${currentVal}`);
+  return currentTotal + currentVal;
+}
+
+// initial value: 100
+console.log(grades.reduce(sumGrades, 100));
+
+// Example: Tallying
+const votes = ['y', 'n', 'y', 'y', 'n', 'y', 'y', 'n', 'y', 'n', 'y', 'n', 'n', 'y', 'n'];
+/*
+{
+  y: yVal,
+  n: nVal
+}
+*/
+const votesCount = (tally, currentVote) => {
+  // (undefined || 0) = 0
+  // (number || 0) = number
+  tally[currentVote] = (tally[currentVote] || 0) + 1;
+  return tally;
+}
+
+// console.log(votes.reduce(votesCount, {}));
+
+const groupBookByRating = (grouped, book) => {
+  const rating = Math.floor(book.rating);
+  if (!grouped[rating]) grouped[rating] = [];
+  grouped[rating].push(book);
+  return grouped;
+}
+
+const groupBooks = books.reduce(groupBookByRating, {});
